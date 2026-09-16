@@ -97,7 +97,7 @@
       },
       "hosting": {
         "title": "Hosting",
-        "body": "The site is hosted on Vercel. The infrastructure may keep ordinary technical server logs (for example IP address and user-agent) for operations, security, and diagnostics, for as long as those purposes require."
+        "body": "The site is hosted on GitHub Pages. The infrastructure may keep ordinary technical server logs (for example IP address) for operations, security, and diagnostics, for as long as those purposes require."
       },
       "rights": {
         "title": "Your rights",

@@ -48,7 +48,7 @@ Ainda no wizard **Email Configuration**, o Zoho lista MX, SPF (TXT) e DKIM (TXT)
 
 Cuidados:
 
-- **Não apague** o A `@` nem o CNAME `www` da Vercel.
+- **Não apague** o A `@` nem o CNAME `www` do GitHub Pages.
 - CNAME **não** pode existir no `@`. MX, A e TXT da raiz convivem; CNAME na raiz não.
 - Só pode haver **um** SPF. Se já existir um TXT começando com `v=spf1`, combine os `include:` numa única linha em vez de criar o segundo.
 - Os MX de exemplo abaixo são os mais comuns da região US/global. **Use os da sua tela** se forem diferentes (`mx.zoho.eu`, `mx.zoho.in`, etc.).

@@ -25,9 +25,10 @@ export async function generateMetadata({
   const { locale: localeParam } = await params;
   const locale = resolveLocale(localeParam);
   const t = await getTranslations({ locale, namespace: "meta" });
+  const home = `${SITE_URL}/${locale}/`;
   const languages = {
-    "pt-BR": SITE_URL,
-    en: `${SITE_URL}/en`,
+    "pt-BR": `${SITE_URL}/pt/`,
+    en: `${SITE_URL}/en/`,
   };
 
   return {
@@ -35,13 +36,13 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     alternates: {
-      canonical: locale === "en" ? `${SITE_URL}/en` : SITE_URL,
+      canonical: home,
       languages,
     },
     openGraph: {
       type: "website",
       locale: locale === "en" ? "en_US" : "pt_BR",
-      url: locale === "en" ? `${SITE_URL}/en` : SITE_URL,
+      url: home,
       siteName: "SYSETECH",
       title: t("title"),
       description: t("description"),

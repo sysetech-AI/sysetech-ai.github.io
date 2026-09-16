@@ -97,7 +97,7 @@
       },
       "hosting": {
         "title": "Hospedagem",
-        "body": "O site é hospedado na Vercel. A infraestrutura pode registrar logs técnicos usuais de servidor (por exemplo, endereço IP e user-agent) para operação, segurança e diagnóstico, pelo período necessário a essas finalidades."
+        "body": "O site é hospedado no GitHub Pages. A infraestrutura pode registrar logs técnicos usuais de servidor (por exemplo, endereço IP) para operação, segurança e diagnóstico, pelo período necessário a essas finalidades."
       },
       "rights": {
         "title": "Seus direitos",
