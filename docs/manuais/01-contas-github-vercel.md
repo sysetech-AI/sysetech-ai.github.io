@@ -6,22 +6,23 @@ O site é um export estático publicado pelo GitHub Actions no GitHub Pages. Nã
 
 - Export estático do Next.js (`out/`)
 - Workflow em `.github/workflows/pages.yml`
-- Arquivo `public/CNAME` com `www.sysetech.com.br`
 - Arquivo `public/.nojekyll` (obrigatório: o Next.js gera a pasta `_next`, e o Jekyll do GitHub ignoraria isso)
 
-O código já está em [github.com/sysetech-AI/sysetech](https://github.com/sysetech-AI/sysetech).
+O repositório se chama `sysetech-ai.github.io` de propósito: no GitHub Pages isso publica a **raiz** `https://sysetech-ai.github.io/`, não um subcaminho `/sysetech/`.
+
+O código já está em [github.com/sysetech-AI/sysetech-ai.github.io](https://github.com/sysetech-AI/sysetech-ai.github.io).
 
 ## 1. Tornar o repositório público
 
 No plano Free do GitHub, Pages só funciona em repositório **público**. O site não contém PDFs, contrato nem NFs.
 
-1. Abra [https://github.com/sysetech-AI/sysetech/settings](https://github.com/sysetech-AI/sysetech/settings).
+1. Abra [https://github.com/sysetech-AI/sysetech-ai.github.io/settings](https://github.com/sysetech-AI/sysetech-ai.github.io/settings).
 2. Em **Danger Zone**, clique **Change visibility → Public**.
 3. Confirme.
 
 ## 2. Ativar GitHub Pages (Actions)
 
-1. Abra [https://github.com/sysetech-AI/sysetech/settings/pages](https://github.com/sysetech-AI/sysetech/settings/pages).
+1. Abra [https://github.com/sysetech-AI/sysetech-ai.github.io/settings/pages](https://github.com/sysetech-AI/sysetech-ai.github.io/settings/pages).
 2. Em **Source**, escolha **GitHub Actions**.
 3. Salve, se o botão aparecer.
 
@@ -29,10 +30,10 @@ Se a organização pedir para habilitar Pages em **Settings da org → Member pr
 
 ## 3. Conferir o deploy
 
-1. Abra [https://github.com/sysetech-AI/sysetech/actions](https://github.com/sysetech-AI/sysetech/actions).
+1. Abra [https://github.com/sysetech-AI/sysetech-ai.github.io/actions](https://github.com/sysetech-AI/sysetech-ai.github.io/actions).
 2. O workflow **Deploy GitHub Pages** deve ficar verde após o push para `main`.
-3. Endereço temporário: `https://sysetech-ai.github.io/sysetech/` (pode falhar caminhos até o DNS do domínio próprio estar ativo).
-4. Com o CNAME, o alvo canônico é `https://www.sysetech.com.br`.
+3. Endereço temporário (antes do DNS): [https://sysetech-ai.github.io/](https://sysetech-ai.github.io/)
+4. Depois do DNS: `https://www.sysetech.com.br`.
 
 O português fica em `/pt/`; o inglês em `/en/`. A raiz `/` redireciona para `/pt/`.
 

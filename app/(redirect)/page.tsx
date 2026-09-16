@@ -13,11 +13,11 @@ export default function ApexPage() {
     <main className="flex min-h-full items-center justify-center p-8">
       <script
         dangerouslySetInnerHTML={{
-          __html: "location.replace('/pt/');",
+          __html: "location.replace('pt/');",
         }}
       />
       <p>
-        <a className="font-semibold text-navy underline" href="/pt/">
+        <a className="font-semibold text-navy underline" href="pt/">
           Continuar para SYSETECH
         </a>
       </p>

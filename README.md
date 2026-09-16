@@ -2,6 +2,7 @@
 
 Site institucional da **SYSETECH TREINAMENTOS LTDA**: treinamento in-company em IA e Engenharia de Sistemas, com consultoria e software sob encomenda.
 
+- Endereço temporário: [https://sysetech-ai.github.io/](https://sysetech-ai.github.io/)
 - Endereço canônico: [https://www.sysetech.com.br](https://www.sysetech.com.br)
 - Português: [https://www.sysetech.com.br/pt/](https://www.sysetech.com.br/pt/)
 - Inglês: [https://www.sysetech.com.br/en/](https://www.sysetech.com.br/en/)

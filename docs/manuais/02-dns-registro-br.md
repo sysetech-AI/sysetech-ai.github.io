@@ -39,8 +39,8 @@ TTL: padrão do Registro.br.
 
 ## 3. HTTPS no GitHub
 
-1. Abra [Settings → Pages](https://github.com/sysetech-AI/sysetech/settings/pages) do repositório.
-2. Em **Custom domain**, deve aparecer `www.sysetech.com.br` (vem do arquivo `CNAME` do repositório).
+1. Abra [Settings → Pages](https://github.com/sysetech-AI/sysetech-ai.github.io/settings/pages) do repositório.
+2. Em **Custom domain**, digite `www.sysetech.com.br` e salve (isso cria/atualiza o arquivo `CNAME`).
 3. Marque **Enforce HTTPS** quando o GitHub oferecer (pode levar alguns minutos após o DNS propagar).
 
 ## 4. Validar
