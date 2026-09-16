@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "SYSETECH — AI and Systems Engineering Training",
+    "description": "In-company training in artificial intelligence and systems engineering for engineering and technology teams. Consulting and custom software.",
+    "privacyTitle": "Privacy Policy — SYSETECH",
+    "privacyDescription": "How SYSETECH handles data on this website."
+  },
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "skip": "Skip to content"
+  },
+  "hero": {
+    "kicker": "AI & SYSTEMS ENGINEERING TRAINING",
+    "title": "AI and Systems Engineering training",
+    "lead": "In-company programs for engineering and technology teams, designed around your organization's context.",
+    "cta": "Contact SYSETECH"
+  },
+  "services": {
+    "eyebrow": "What we do",
+    "title": "Training first. Consulting and software when the organization needs to go further.",
+    "groups": {
+      "training": {
+        "title": "Training",
+        "items": {
+          "ai": {
+            "title": "Artificial Intelligence",
+            "body": "Practical training for teams that need to understand, evaluate, and apply AI in engineering work."
+          },
+          "se": {
+            "title": "Systems Engineering",
+            "body": "Systems engineering fundamentals and practice for teams that design, integrate, and operate complex systems."
+          },
+          "pm": {
+            "title": "Project Management",
+            "body": "In-company project management training, aligned with how engineering and technology teams deliver work."
+          }
+        }
+      },
+      "consulting": {
+        "title": "Consulting",
+        "items": {
+          "ai": {
+            "title": "Artificial Intelligence consulting",
+            "body": "Support for organizations that need to decide what to adopt, why, and within which technical and operational limits."
+          },
+          "se": {
+            "title": "Systems Engineering consulting",
+            "body": "Guidance to structure requirements, architecture, integration, and systems governance."
+          }
+        }
+      },
+      "software": {
+        "title": "Software",
+        "items": {
+          "custom": {
+            "title": "Custom development",
+            "body": "Design and development of custom software when training or consulting calls for a solution built for the client."
+          }
+        }
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "In-company training for teams that build and operate systems.",
+    "body": "SYSETECH TREINAMENTOS LTDA provides training in artificial intelligence, systems engineering, and project management for engineering and technology teams. We complement that work with consulting in the same disciplines and with custom software development.",
+    "note": "We work in the contracting company's context: the program is built for the team, not for an open enrollment class."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "For training, consulting, or software proposals, write to us.",
+    "body": "The institutional inbox is SYSETECH's commercial channel. Describe the goal, the internal audience, and the timeline — we take it from there.",
+    "cta": "Send email",
+    "emailLabel": "Email"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "Last updated 16 September 2026.",
+    "sections": {
+      "controller": {
+        "title": "Who we are",
+        "body": "This website is operated by SYSETECH TREINAMENTOS LTDA. For matters related to this site or personal data sent by email, use contato@sysetech.com.br."
+      },
+      "collection": {
+        "title": "What this site collects",
+        "body": "This institutional website has no forms, logged-in area, analytics cookies, or remarketing tools. We do not store sign-ups or track browsing behavior for advertising."
+      },
+      "email": {
+        "title": "When you email us",
+        "body": "If you send a message to contato@sysetech.com.br, we process the message content, your email address, and any data you include only to respond to the commercial or technical request. We do not sell that information or use it for marketing lists."
+      },
+      "hosting": {
+        "title": "Hosting",
+        "body": "The site is hosted on Vercel. The infrastructure may keep ordinary technical server logs (for example IP address and user-agent) for operations, security, and diagnostics, for as long as those purposes require."
+      },
+      "rights": {
+        "title": "Your rights",
+        "body": "Where Brazil's General Data Protection Law (LGPD) applies, you may request access, correction, or deletion of data you sent by email by writing to contato@sysetech.com.br."
+      },
+      "changes": {
+        "title": "Changes",
+        "body": "We may update this policy if the site starts collecting data in another way. The current version is the one published on this page."
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "SYSETECH — Treinamento em IA e Engenharia de Sistemas",
+    "description": "Treinamento in-company em inteligência artificial e engenharia de sistemas para equipes de engenharia e tecnologia. Consultoria e software sob encomenda.",
+    "privacyTitle": "Política de Privacidade — SYSETECH",
+    "privacyDescription": "Como a SYSETECH trata dados no site institucional."
+  },
+  "nav": {
+    "services": "Serviços",
+    "about": "Sobre",
+    "contact": "Contato",
+    "privacy": "Privacidade",
+    "skip": "Ir para o conteúdo"
+  },
+  "hero": {
+    "kicker": "AI & SYSTEMS ENGINEERING TRAINING",
+    "title": "Treinamento em IA e Engenharia de Sistemas",
+    "lead": "Programas in-company para equipes de engenharia e tecnologia, desenhados para o contexto da sua empresa.",
+    "cta": "Fale com a SYSETECH"
+  },
+  "services": {
+    "eyebrow": "O que fazemos",
+    "title": "Treinamento em primeiro plano. Consultoria e software quando a empresa precisa ir além.",
+    "groups": {
+      "training": {
+        "title": "Treinamentos",
+        "items": {
+          "ai": {
+            "title": "Inteligência Artificial",
+            "body": "Capacitação prática para times que precisam entender, avaliar e aplicar IA no trabalho de engenharia."
+          },
+          "se": {
+            "title": "Engenharia de Sistemas",
+            "body": "Fundamentos e prática de engenharia de sistemas para equipes que projetam, integram e operam sistemas complexos."
+          },
+          "pm": {
+            "title": "Gestão de Projetos",
+            "body": "Treinamento in-company em gestão de projetos, alinhado à forma como times de engenharia e tecnologia entregam trabalho."
+          }
+        }
+      },
+      "consulting": {
+        "title": "Consultoria",
+        "items": {
+          "ai": {
+            "title": "Consultoria em Inteligência Artificial",
+            "body": "Apoio a organizações que precisam decidir o que adotar, por quê e com quais limites técnicos e operacionais."
+          },
+          "se": {
+            "title": "Consultoria em Engenharia de Sistemas",
+            "body": "Orientação para estruturar requisitos, arquitetura, integração e governança de sistemas."
+          }
+        }
+      },
+      "software": {
+        "title": "Software",
+        "items": {
+          "custom": {
+            "title": "Desenvolvimento sob encomenda",
+            "body": "Concepção e desenvolvimento de software sob encomenda, quando o treinamento ou a consultoria pedem uma solução construída para o cliente."
+          }
+        }
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "Sobre",
+    "title": "Capacitação in-company para quem constrói e opera sistemas.",
+    "body": "A SYSETECH TREINAMENTOS LTDA oferece treinamento em inteligência artificial, engenharia de sistemas e gestão de projetos para equipes de engenharia e tecnologia. Completamos essa atuação com consultoria nas mesmas disciplinas e com desenvolvimento de software sob encomenda.",
+    "note": "Trabalhamos no contexto da empresa contratante: o programa é montado para o time, não para uma turma aberta."
+  },
+  "contact": {
+    "eyebrow": "Contato",
+    "title": "Para propostas de treinamento, consultoria ou software, escreva para nós.",
+    "body": "O e-mail institucional é o canal comercial da SYSETECH. Descreva o objetivo, o público interno e o prazo — retornamos a partir daí.",
+    "cta": "Enviar e-mail",
+    "emailLabel": "E-mail"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  },
+  "privacy": {
+    "title": "Política de Privacidade",
+    "updated": "Atualizada em 16 de setembro de 2026.",
+    "sections": {
+      "controller": {
+        "title": "Quem somos",
+        "body": "Este site é operado por SYSETECH TREINAMENTOS LTDA. Para assuntos relacionados a este site ou a dados pessoais enviados por e-mail, use contato@sysetech.com.br."
+      },
+      "collection": {
+        "title": "O que este site coleta",
+        "body": "O site institucional não possui formulários, área logada, cookies de analytics nem ferramentas de remarketing. Não gravamos cadastros nem rastreamos comportamento de navegação para publicidade."
+      },
+      "email": {
+        "title": "Quando você nos escreve",
+        "body": "Se você envia um e-mail para contato@sysetech.com.br, tratamos o conteúdo da mensagem, seu endereço de e-mail e eventuais dados que você incluir apenas para responder à solicitação comercial ou técnica. Não vendemos essa informação nem a usamos para listas de marketing."
+      },
+      "hosting": {
+        "title": "Hospedagem",
+        "body": "O site é hospedado na Vercel. A infraestrutura pode registrar logs técnicos usuais de servidor (por exemplo, endereço IP e user-agent) para operação, segurança e diagnóstico, pelo período necessário a essas finalidades."
+      },
+      "rights": {
+        "title": "Seus direitos",
+        "body": "Se o tratamento se aplicar à Lei Geral de Proteção de Dados (LGPD), você pode solicitar acesso, correção ou exclusão dos dados que tiver enviado por e-mail, escrevendo para contato@sysetech.com.br."
+      },
+      "changes": {
+        "title": "Alterações",
+        "body": "Podemos atualizar esta política se o site passar a coletar dados de outra forma. A versão vigente é a publicada nesta página."
+      }
+    }
+  }
+}
