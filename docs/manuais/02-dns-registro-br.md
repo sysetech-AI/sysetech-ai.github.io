@@ -1,67 +1,113 @@
-# Manual 2 — DNS no Registro.br (GitHub Pages)
+# Manual 2 — Ligar sysetech.com.br ao GitHub Pages
 
-Este manual aponta `www.sysetech.com.br` para o GitHub Pages **sem trocar os nameservers**. O DNS continua no Registro.br para o e-mail Zoho (Manual 3) funcionar no mesmo domínio.
+O site já funciona em [https://sysetech-ai.github.io/](https://sysetech-ai.github.io/). Agora o Registro.br precisa **apontar o domínio** para o GitHub. Isso não é um “redirecionamento de página do Facebook”. É DNS: um mapa que diz “quando alguém digita este nome, o computador vai nestes endereços”.
 
-Faça isso depois do workflow do GitHub Pages estar verde (Manual 1).
+## Não use a tela “Configurar endereçamento”
 
-## Regra que não pode quebrar
+Essa tela tem dois campos:
 
-Não altere os **servidores DNS / nameservers** do domínio. Você só adiciona/edita registros na zona.
+- **Endereço do site**
+- **Servidor de e-mail**
 
-Não coloque CNAME no `@` (raiz). Isso conflita com MX do e-mail.
+Ela é o modo **simples**. Não dá para colocar os quatro IPs do GitHub e o CNAME do `www` do jeito certo. Se preencher “Servidor de e-mail” agora, também atrapalha o Zoho depois.
 
-## 1. Abrir a zona no Registro.br
+**Deixe os dois campos vazios.** Clique no botão **MODO AVANÇADO**.
 
-1. Entre em [https://registro.br](https://registro.br).
-2. Abra **sysetech.com.br**.
-3. Vá em **DNS** / **Editar zona**.
-4. Confirme que os nameservers ainda são os do Registro.br.
+## O que você vai criar (visão geral)
 
-## 2. Registros do site (GitHub Pages)
+| O que a pessoa digita | O que o DNS deve fazer |
+| --- | --- |
+| `www.sysetech.com.br` | CNAME para `sysetech-ai.github.io` |
+| `sysetech.com.br` (sem www) | Quatro registros A com IPs do GitHub |
+
+Não altere **servidores DNS / nameservers** do domínio. Não coloque CNAME na raiz (`@`). A raiz com CNAME impede o e-mail.
 
 Valores oficiais: [documentação do GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
-Apague A/CNAME antigos do **site** (não apague MX/TXT de e-mail).
+## Passo a passo no Registro.br
 
-Crie:
+1. Entre em [https://registro.br](https://registro.br) e faça login.
+2. Clique no domínio **sysetech.com.br**.
+3. Abra a área de DNS (pode aparecer como **DNS**, **Editar zona** ou **Configurar endereçamento**).
+4. Se aparecer a tela dos dois campos, clique em **MODO AVANÇADO**.
+5. Você verá uma **lista de registros**. Cada linha tem tipo, nome (host) e valor.
 
-| Tipo  | Nome / host | Valor |
-| ----- | ----------- | ----- |
-| A     | `@` (ou em branco) | `185.199.108.153` |
-| A     | `@` | `185.199.109.153` |
-| A     | `@` | `185.199.110.153` |
-| A     | `@` | `185.199.111.153` |
-| CNAME | `www` | `sysetech-ai.github.io` |
+### Apague só o que for do site antigo
 
-O CNAME `www` aponta para `sysetech-ai.github.io` **sem** `/sysetech` no final.
+Se já existir registro **A** ou **CNAME** do site (por exemplo um IP da Locaweb, um CNAME velho, um “www” apontando para outro lugar), apague **esses**.
 
-TTL: padrão do Registro.br.
+Não apague, se existirem:
 
-## 3. HTTPS no GitHub
+- registros **MX** (e-mail)
+- registros **TXT** de e-mail (SPF, DKIM)
+- nameservers
 
-1. Abra [Settings → Pages](https://github.com/sysetech-AI/sysetech-ai.github.io/settings/pages) do repositório.
-2. Em **Custom domain**, digite `www.sysetech.com.br` e salve (isso cria/atualiza o arquivo `CNAME`).
-3. Marque **Enforce HTTPS** quando o GitHub oferecer (pode levar alguns minutos após o DNS propagar).
+Se a zona estiver vazia, só adicione o que está abaixo.
 
-## 4. Validar
+### Crie estes 5 registros
 
-No Terminal:
+No modo avançado, use **Adicionar registro** (ou equivalente) cinco vezes.
+
+**1 a 4 — raiz do domínio (sem www)**
+
+Para cada um:
+
+- **Tipo:** `A`
+- **Nome / host:** `@`  
+  Se o painel não aceitar `@`, deixe o nome **em branco** ou use `sysetech.com.br`, conforme o próprio Registro.br indicar. O alvo é a **raiz**, não `www`.
+- **Valor / aponta para:** um destes IPs (um IP por registro):
+  - `185.199.108.153`
+  - `185.199.109.153`
+  - `185.199.110.153`
+  - `185.199.111.153`
+- **TTL:** deixe o padrão.
+
+Ficam **quatro** linhas A, todas na raiz, cada uma com um IP diferente. O GitHub pede os quatro.
+
+**5 — www**
+
+- **Tipo:** `CNAME`
+- **Nome / host:** `www`  
+  Só `www`. Não escreva `www.sysetech.com.br` no nome, a menos que o painel mostre o domínio completo sozinho à direita.
+- **Valor / aponta para:** `sysetech-ai.github.io.`  
+  Se o Registro.br reclamar, tente sem o ponto final: `sysetech-ai.github.io`  
+  **Não** coloque `https://`. **Não** coloque `/sysetech`. **Não** coloque `www.sysetech.com.br`.
+- **TTL:** padrão.
+
+Salve a zona (**Salvar**, **Publicar** ou equivalente).
+
+## Depois: dizer ao GitHub qual é o domínio
+
+O DNS sozinho não basta. O GitHub precisa “assumir” o nome.
+
+1. Abra [https://github.com/sysetech-AI/sysetech-ai.github.io/settings/pages](https://github.com/sysetech-AI/sysetech-ai.github.io/settings/pages).
+2. Em **Custom domain**, digite exatamente: `www.sysetech.com.br`
+3. Clique em **Save**.
+4. Espere de alguns minutos até algumas horas (propagação de DNS).
+5. Quando o GitHub mostrar o domínio como verificado, marque **Enforce HTTPS**.
+
+Se o GitHub disser “DNS check unsuccessful”, espere e clique em Save de novo. Não volte para a tela simples do Registro.br.
+
+## Como saber se deu certo
+
+No computador, Terminal:
 
 ```bash
-dig A sysetech.com.br +short
 dig CNAME www.sysetech.com.br +short
+dig A sysetech.com.br +short
 ```
 
-O `www` deve responder `sysetech-ai.github.io`. Os A da raiz devem ser os IPs `185.199.108–111.153`.
+Esperado:
 
-No navegador:
+- `www` → `sysetech-ai.github.io.`
+- raiz → os quatro IPs `185.199.108–111.153`
 
-1. `https://www.sysetech.com.br` abre o site (cadeado).
-2. `https://www.sysetech.com.br/pt/` é o português.
-3. `https://www.sysetech.com.br/en/` é o inglês.
+No navegador (pode levar até algumas horas):
 
-O apex `sysetech.com.br` no GitHub Pages **não redireciona automaticamente** para `www`. Os quatro registros A fazem o apex também servir o site. Se quiser forçar só `www`, isso fica para um ajuste posterior.
+- [https://www.sysetech.com.br](https://www.sysetech.com.br) abre o site, com cadeado.
+- [https://www.sysetech.com.br/pt/](https://www.sysetech.com.br/pt/) em português.
+- [https://www.sysetech.com.br/en/](https://www.sysetech.com.br/en/) em inglês.
 
-## 5. Quando parar
+## E-mail
 
-Pare neste manual quando `https://www.sysetech.com.br` abrir com HTTPS. Em seguida: [Manual 3 — Zoho Mail](03-zoho-mail.md).
+Não preencha **Servidor de e-mail** nessa tela. O Zoho (caixa `contato@sysetech.com.br`) é o [Manual 3](03-zoho-mail.md), **depois** do site no domínio.
